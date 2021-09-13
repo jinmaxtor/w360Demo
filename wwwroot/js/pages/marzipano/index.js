@@ -64,19 +64,40 @@ export class Index {
                 pinFirstLevel: true
             });
 
+
+            const hotspots = [];
+
             // Create link hotspots.
             sceneData.linkHotspots.forEach(hotspot => {
                 const element = this.createLinkHotspotElement(hotspot);
-                scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
+                const linkHotspot = scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
+                console.debug("linkHotspot: ", linkHotspot);
+
+                const hotspotItem = {
+                    element: element,
+                    hotspot: linkHotspot,
+                    type: 'link-hotspot'
+                };
+
+                hotspots.push(hotspotItem);
             });
 
             // Create info hotspots.
             sceneData.infoHotspots.forEach(hotspot => {
                 const element = this.createInfoHotspotElement(hotspot);
-                scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
+                const infoHotspot = scene.hotspotContainer().createHotspot(element, { yaw: hotspot.yaw, pitch: hotspot.pitch });
+                console.debug("infoHotspot: ", infoHotspot);
+
+                const hotspotItem = {
+                    element: element,
+                    hotspot: infoHotspot,
+                    type: 'info-hotspot'
+                };
+
+                hotspots.push(hotspotItem);
             });
 
-            return {data: sceneData, scene: scene, view: view};
+            return {data: sceneData, scene: scene, view: view, hotspots: hotspots};
         });
 
         // Set up autorotate, if enabled.
@@ -257,6 +278,23 @@ export class Index {
     findSceneDataById(id) {
         const findedSceneData = this.data.scenes.find(sceneData => sceneData.id === id);
         return findedSceneData;
+    }
+
+    changeInfoHotspotPosition(x, y) {
+        let view = pageInstance.scenes[0].view;
+        let infoHotspot = pageInstance.scenes[0].hotspots.find(hotspot => hotspot.type === "info-hotspot");
+
+        let newPosition = view.screenToCoordinates({ x: x, y: y });
+        infoHotspot.hotspot.setPosition(newPosition);
+    }
+
+    addLayerToScene() {
+        let newSource = new Marzipano.ImageUrlSource.fromString(`${this.baseUrl}assets/360/marzipano/paisaje_mapaiso-pano-edit.jpg`);
+        let newGeometry = new Marzipano.EquirectGeometry([{ width: 3000 }]);
+        let mainScene = this.scenes[0];
+        let newLayer = mainScene.scene.createLayer({ source: newSource, geometry: newGeometry });
+
+        mainScene.scene._layers.unshift({ name: "capa nueva", layer: newLayer });
     }
 }
 

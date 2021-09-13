@@ -33,6 +33,10 @@
         <li data-source="koloreyes">KolorEyes</li>
     </ul>-->
 
+    <div id="titleBar">
+        <h1 class="sceneName"></h1>
+    </div>
+
     <script src="~/lib/marzipano/marzipano.js"></script>
     <script>
         const params = {
@@ -40,11 +44,11 @@
             baseUrl: new URL("@Url.Content("~/")", document.baseURI)
         }
 
-        console.debug("params: ", params)
+        console.debug("params: ", params);
 
         window.params = params;
     </script>
-    <script src="~/js/pages/marzipano/index.js" type="module"></script>
+    <script src="~/js/pages/marzipano/index.js" type="module" asp-append-version="true"></script>
 
 </body>
 </html>
