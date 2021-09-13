@@ -1,0 +1,449 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "";
+}
+<!doctype html>
+<html lang="es">
+<head>
+    <title>360 - DEMO</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://www.muebleshurtado.com:8080/imagen_muebleshurtado/foto_13_08_2018_09_19_17_369.png" rel="shortcut icon">
+
+    <!--Seo Tags-->
+    <meta name="title" content="MUEBLES HURTADO">
+    <meta name="keywords" content="muebles, sillas, mesas, madera, oficina, dormitorios">
+    <meta name="description" content="Portal de Muebles">
+    <link href="http://www.muebleshurtado.com" hreflang="es" rel="alternate" title="MUEBLES HURTADO" type="text/html" />
+
+
+    <!--Twitter Tags-->
+    <script>
+             var urlBase = "http://www.muebleshurtado.com";
+    </script>
+    <link rel="styleSheet" href="~/assets/styles/font-awesome.min.css" type="text/css">
+    <link rel="styleSheet" href="~/assets/styles/style.css" type="text/css">
+    <link rel="styleSheet" href="~/assets/styles/ipanorama/effect.css" type="text/css">
+    <link rel="styleSheet" href="~/assets/styles/ipanorama/ipanorama.css" type="text/css">
+    <link rel="styleSheet" href="~/assets/styles/ipanorama/ipanorama.theme.default.css" type="text/css">
+    <link rel="styleSheet" href="~/assets/styles/ipanorama/ipanorama.theme.modern.css" type="text/css">
+    <link rel="styleSheet" href="~/assets/styles/ipanorama/ipanorama.theme.dark.css" type="text/css">
+    <link rel="styleSheet" href="~/assets/styles/ipanorama/ipanorama.my-style.css?v=2" type="text/css">
+    <link rel="styleSheet" href="~/assets/styles/style360.css" type="text/css">        <!-- COLOURS -->
+    <style type="text/css">
+        /* COLORES */
+        /*.color_secondary*/
+        .color_secondary {
+            color: #007a3f !important;
+        }
+
+        .back_secondary {
+            background: #007a3f !important;
+        }
+
+        .boder_secondary {
+            border-color: #007a3f !important;
+        }
+
+        .header-wrapper.style-3 header::before,
+        .my-modal .modal-dialog .modal-footer button[type="button"] {
+            background: #007a3f !important;
+        }
+
+        .button.style-12 {
+            border-color: #007a3f;
+            background: #007a3f;
+        }
+
+        /*.color_primary*/
+        .color_primary {
+            color: #2e2017 !important;
+        }
+
+        .back_primary {
+            background: #2e2017 !important;
+        }
+
+        .border_primary {
+            border-color: #2e2017 !important;
+        }
+
+        body.style-3 .swiper-tabs .block-title:before,
+        body.style-3 .bubbles span,
+        body.style-3 .sidebar-navigation .title,
+        body.style-3 .sidebar-navigation .entry:before,
+        .my-modal .modal-dialog .modal-content .modal-header,
+        .my-modal .modal-dialog .modal-footer button[type="submit"] {
+            background: #2e2017 !important;
+        }
+    </style>
+
+    <style>
+        .my-360 {
+            width: 100px;
+            height: 100px;
+            background: url(@(ViewBag.__UrlBase)/assets/recursos/volver.png) no-repeat transparent;
+            background-size: 100% 100% !important;
+            margin: auto auto !important;
+            cursor: pointer;
+            border: 10px solid #03a9f4;
+            border-radius: 50%;
+        }
+
+            .my-360:hover:after {
+                background-size: 10px 20px;
+                display: inline-block;
+                width: 100px;
+                height: 20px;
+                content: "VOLVER";
+                background: black;
+                color: white;
+                padding: 5px;
+                text-align: center;
+                border-radius: 10px;
+                margin-top: 109px;
+            }
+
+
+
+
+
+        .my-punto {
+            width: 30px;
+            height: 30px;
+            background-size: 100% 100% !important;
+            margin: auto auto !important;
+            cursor: pointer;
+            border-radius: 50%;
+            background: #ef525d;
+        }
+            .my-punto:hover {
+                background: black;
+            }
+                .my-punto:hover:after {
+                    background-size: 10px 20px;
+                    display: inline-block;
+                    width: 130px;
+                    height: 20px;
+                    content: "Ver Detalle";
+                    background: black;
+                    color: white;
+                    padding: 5px;
+                    text-align: center;
+                    border-radius: 10px;
+                    margin-top: 30px;
+                    margin-left: -50px;
+                }
+
+
+
+        .my-punto-reservado {
+            width: 30px;
+            height: 30px;
+            background-size: 100% 100% !important;
+            margin: auto auto !important;
+            cursor: pointer;
+            border-radius: 50%;
+            background: #71b9e2;
+        }
+
+            .my-punto-reservado:hover {
+                background: black;
+            }
+
+                .my-punto-reservado:hover:after {
+                    background-size: 10px 20px;
+                    display: inline-block;
+                    width: 130px;
+                    height: 20px;
+                    content: "Ver Detalle";
+                    background: black;
+                    color: white;
+                    padding: 5px;
+                    text-align: center;
+                    border-radius: 10px;
+                    margin-top: 30px;
+                    margin-left: -50px;
+                }
+
+
+
+        .my-punto-libre {
+            width: 30px;
+            height: 30px;
+            background-size: 100% 100% !important;
+            margin: auto auto !important;
+            cursor: pointer;
+            border-radius: 50%;
+            background: #42b140;
+        }
+
+            .my-punto-libre:hover {
+                background: black;
+            }
+
+                .my-punto-libre:hover:after {
+                    background-size: 10px 20px;
+                    display: inline-block;
+                    width: 130px;
+                    height: 20px;
+                    content: "Ver Detalle";
+                    background: black;
+                    color: white;
+                    padding: 5px;
+                    text-align: center;
+                    border-radius: 10px;
+                    margin-top: 30px;
+                    margin-left: -50px;
+                }
+
+
+
+            .my-colegio {
+                width: 100px;
+                height: 100px;
+                background: url(@(ViewBag.__UrlBase)/assets/recursos/colegio.png) no-repeat transparent;
+                background-size: 100% 100% !important;
+                margin: auto auto !important;
+                cursor: pointer;
+                border: 10px solid #03a9f4;
+                border-radius: 50%;
+            }
+
+                .my-colegio:hover:after {
+                    background-size: 10px 20px;
+                    display: inline-block;
+                    width: 100px;
+                    height: 20px;
+                    content: "Colegio";
+                    background: black;
+                    color: white;
+                    padding: 5px;
+                    text-align: center;
+                    border-radius: 10px;
+                    margin-top: 109px;
+                }
+
+
+    </style>
+
+    <style>
+
+        .ver-mas {
+            width: 50px;
+            height: 50px;
+            background: url( @(ViewBag.__UrlBase)/assets/recursos/ver_mas.png) no-repeat #9e9e9e5c;
+            background-size: 100% 100% !important;
+            margin: auto auto !important;
+            cursor: pointer;
+            border: 10px solid transparent;
+            border-radius: 50%;
+        }
+
+            .ver-mas:hover:after {
+                display: inline-block;
+                width: 100px;
+                content: "Ir al punto";
+                background: black;
+                color: white;
+                padding: 3px;
+                text-align: center;
+                border-radius: 10px;
+                margin-top: 40px;
+                margin-left: -35px;
+            }
+
+    </style>
+
+    <style>
+        .div_banner {
+            width: 200px;
+            height: 60px;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            z-index: 100000000 !important;
+        }
+
+        .panel-latera {
+            position: absolute;
+            right: 0;
+            float: right;
+            top: 30%;
+            z-index: 99;
+            background: #ffffff4d;
+            border: 4px solid whitesmoke;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="panel-latera">
+        <ul>
+            <li style="background: #71b9e2; color: white; padding: 5px;">RESERVADO</li>
+            <li style="background: #42b140; color: white; padding: 5px;">LIBRE</li>
+            <li style="background: #ef525d; color: white; padding: 5px;">VENDIDO</li>
+        </ul>
+    </div>
+
+
+    <div class="div_banner">
+        <a href="https://www.facebook.com/MapaisoSur" target="_blank"><img src="~/assets/recursos/logo_mapaiso.png" style="width: 100%" /></a>
+    </div>
+    @*<div class="btn-volver">
+            <a href="http://www.muebleshurtado.com/"><img src="~/assets/recursos/logo_mapaiso.png" /></a>
+
+            <a class="open-image"><img src="http://www.muebleshurtado.com/assets/images/mapa-360.png" alt="volver" /></a>
+        </div>*@
+    <div id="mypanorama"></div>
+
+
+    <button id="btnModal" type="button" data-toggle="modal" data-target="#myModal" hidden></button>
+    <!-- Modal -->
+
+    <style>
+        table {
+            width: 100%;
+            margin: 10px;
+            text-align: left;
+            border: 1px solid #406c0a;
+        }
+    </style>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog" style="width: 30%">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="background: #0169b9; color: white; text-align: center;">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Detalle</h4>
+                </div>
+                <div class="modal-body" style="text-align:center">
+
+                    <img src="~/assets/recursos/condominio1.jpg" style="width: 50%; text-align:center" />
+
+                    <table>
+                        <tr>
+                            <td>
+                                FML
+                            </td>
+                            <td>
+                                1-16-20
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Fecha de Venta
+                            </td>
+                            <td>
+                                12/08/2021
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Precio
+                            </td>
+                            <td>
+                                5,000 $
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Superficie
+                            </td>
+                            <td>
+                                360 m2
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div>
+                        <a href="https://www.google.com.py/maps/dir/-17.792666197831846,-62.990064774973455" target="_blank"><img src="~/assets/recursos/map_icon.png" alt="volver" style="width:36px" />UBICACION</a>
+                        <a href="https://wa.me/59179867275" target="_blank"><img src="~/assets/recursos/Whatsapp_icon3.png" alt="volver" style="width:50px" />CONTACTO</a>
+                    </div>
+
+                </div>
+                <div class="modal-footer" style="background: #0169b9; text-align: center;">
+                    <a href="~/assets/recursos/plano.pdf" target="_blank">
+                        <button type="button" class="btn btn-default">PLANO</button>
+                    </a>
+
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="~/assets/scripts/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="~/assets/scripts/ipanorama/three.min.js"></script>
+    <script type="text/javascript" src="~/assets/scripts/ipanorama/jquery.ipanorama.min.js"></script>
+    <script type="text/javascript" src="~/assets/scripts/ipanorama/MH1.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+        var getUrl = window.location;
+        //var urlBase360 = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+        var urlBase360 = '@(ViewBag.__UrlBase)';
+
+        var urlImage = "http://www.muebleshurtado.com:8080/imagen_muebleshurtado/";
+        var url_service_jboss = "http://www.muebleshurtado.com:8080/MueblesHurtadoServices/Services";
+
+
+
+
+        //document.getElementsByClassName("my-colegio")[0].addEventListener('click', myFunction, false);
+
+
+        function CargarAcciones() {
+            //document.getElementsByClassName("my-colegio")[0].innerHTML = "<div class='div-container-360'><input type='checkbox' onclick='handleClick(this, 4, 14);'/><button class='div-button-360' onclick='myFunction()'>100 [Bs]</button></div>";
+
+
+            var els = document.getElementsByClassName("my-punto2");
+
+            Array.prototype.forEach.call(els, function (el) {
+
+                let index = randomInteger(1, 3);
+                console.log(index);
+                switch (index) {
+                    case 1:
+                        el.innerHTML = "<div class='div-container-360'><button class='my-punto-reservado' onclick='myFunction()'></button></div>";
+                        break;
+                    case 2:
+                        el.innerHTML = "<div class='div-container-360'><button class='my-punto-libre' onclick='myFunction()'></button></div>";
+                        break;
+                    case 3:
+                        el.innerHTML = "<div class='div-container-360'><button class='my-punto' onclick='myFunction()'></button></div>";
+                        break;
+                }
+                
+
+            });
+
+
+        }
+
+        function myFunction() {
+            document.getElementById("btnModal").click();
+        }
+
+        function randomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+
+    </script>
+
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.9/gmaps.min.js"></script>
+
+
+</body>
+</html>

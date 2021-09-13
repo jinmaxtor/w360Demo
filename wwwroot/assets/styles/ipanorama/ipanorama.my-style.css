@@ -1,0 +1,229 @@
+body{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+#mypanorama{
+    width: 100%;
+    height:600px;
+}
+.btn-volver{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 100000000 !important;
+}
+.btn-volver img{
+    width: 100%;
+    height: 100%;
+}
+.btn-volver img:hover{
+    opacity: 0.8;
+}
+
+.ipnrm.ipnrm-theme-dark .ipnrm-popover .ipnrm-content {
+    padding: 0px;
+}
+/****************** INGEMAQ ***************************/
+/*.img-indicacion-360{
+    width: 200px;
+    height: 200px;
+    background:url(../../images/ipanorama/img-indicacion-360-1.gif) no-repeat transparent;
+    background-size:100% 100% !important;
+    margin: auto auto !important;
+}*/
+/*.my-popover{
+    border-radius: 0px !important;
+    background: rgba(0,0,0,0.5) !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.my-info{
+    width: 50px;
+    height: 50px;
+    background:url(../../images/ipanorama/btn-info.gif) no-repeat transparent;
+    background-size:100% 100% !important;
+    margin: auto auto !important;
+}
+.my-info:hover{
+    background:url(../../images/ipanorama/btn-info-hover.gif) no-repeat transparent;
+}
+.my-360{
+    width: 100px;
+    height: 100px;
+    background:url(../../images/ipanorama/btn-360.gif) no-repeat transparent;
+    background-size:100% 100% !important;
+    margin: auto auto !important;
+    cursor: pointer;
+}
+.my-360:hover{
+    background:url(../../images/ipanorama/btn-360-hover.gif) no-repeat transparent;
+}
+.info-title{
+    color: blue;
+    font-weight: bold;
+}
+
+.panorama_content1{
+    color: white;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.panorama_content1 .ipa_img{
+    width: 30%;
+    display:block;
+    float: left;
+}
+.panorama_content1 .ipa_content{
+    width: 65%;
+    display:block;
+    padding: 1%;
+    float: left;
+}
+
+.panorama_content1 .ipa_content h3{
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.panorama_content1 .ipa_content p{
+    text-align: justify;
+}
+
+.ipnrm-scene-thumbs{
+    background: #ff931e !important;
+}*/
+/*************************************************************/
+
+/****************** MUEBLES HURTADO ***************************/
+.img-indicacion-360{
+    width: 300px;
+    height: 200px;
+    background:url(../../images/ipanorama/mhurtado/img-indicacion-360.gif) no-repeat transparent;
+    background-size:100% 100% !important;
+    margin: auto auto !important;
+}
+.my-popover{
+    border-radius: 0px !important;
+    background: rgba(252,68,32,1) !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.my-info{
+    width: 50px;
+    height: 50px;
+    /*background:url(../../images/ipanorama/mhurtado/my-info.png) no-repeat transparent;*/
+    background:url(../../images/ipanorama/mhurtado/my-info2.png) no-repeat transparent;
+    background-size:100% 100% !important;
+    margin: auto auto !important;
+}
+.my-360{
+    width: 100px;
+    height: 100px;
+    /*background:url(../../images/ipanorama/mhurtado/my-360.gif) no-repeat transparent;*/
+    background:url(../../images/ipanorama/mhurtado/my-360_2.gif) no-repeat transparent;
+    background-size:100% 100% !important;
+    margin: auto auto !important;
+    cursor: pointer;
+}
+.panorama_content1{
+    color: white;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.panorama_content1 .ipa_img{
+    width: 50%;
+    display:block;
+    float: left;
+}
+.panorama_content1 .ipa_content{
+    width: 48%;
+    display:block;
+    padding: 1%;
+    float: left;
+}
+
+.panorama_content1 .ipa_content h3{
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.panorama_content1 .ipa_content p{
+    text-align: justify;
+}
+
+.ipnrm-scene-thumbs{
+    background: #ff931e !important;
+}
+
+/* Nuevos estilos */
+
+.mh-my-popover{
+    border-radius: 0px !important;
+    background: #258d5b !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    border-radius: 20px !important;
+}
+.mh-my-info{
+    width: 50px;
+    height: 50px;
+    background:url(../../images/ipanorama/mhurtado/my-info2.png) no-repeat transparent;
+    background-size:100% 100% !important;
+    margin: auto auto !important;
+}
+.mh-my-360{
+    width: 90px;
+    height: 90px;
+    background:url(../../images/ipanorama/mhurtado/my-360_2.gif) no-repeat transparent;
+    background-size:100% 100% !important;
+    margin: auto auto !important;
+    cursor: pointer;
+}
+.mh_panorama_content1{
+    color: white;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.mh_panorama_content1 .mh_ipa_img{
+    display: block;
+    width: 40%;
+    float: left;
+    border-radius: 20px !important;
+    overflow: hidden;
+}
+.mh_panorama_content1 .mh_ipa_content{
+    display: block;
+    width: 60%;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.mh_panorama_content1 .mh_ipa_content h3{
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.mh_panorama_content1 .mh_ipa_content p:first-child{
+    padding-top: 2px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mh_panorama_content1 .mh_ipa_content p{
+    text-align: justify;
+    padding: 5px;
+}
+
+.mh_ipnrm-scene-thumbs{
+    background: #ff931e !important;
+}
+
+
+/********************************************************/

@@ -1,0 +1,70 @@
+/******* DIALOGO ******/
+.overlay-popup{position: fixed; width: 100%; height: 100%; z-index: 15; left: -100%; top: 0; overflow: hidden;}
+.overlay-popup.visible{left: 0;}
+.overlay-popup *:last-child{margin-bottom: 0!important;}
+.overlay-popup .close-layer{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); opacity: 0; min-height: 100vh;}
+.overlay-popup .cell-view{position: relative;}
+.overlay-popup.active .close-layer{opacity: 1;}
+.overlay-popup .overflow{position: absolute; left: 0; top: 0; width: 100%; height: 100%; text-align: center; overflow-x: hidden;}
+.overlay-popup .popup-container{padding: 45px; background: #fff; max-width: 900px; margin: 0 auto; text-align: left; position: relative; transform: perspective(2000px) rotateX(77deg); -moz-transform: perspective(2000px) rotateX(77deg); -webkit-transform: perspective(2000px) rotateX(77deg); -ms-transform: perspective(2000px) rotateX(77deg); opacity: 0;}
+.overlay-popup.active .popup-container{transform: perspective(2000px) rotateX(0deg); -moz-transform: perspective(2000px) rotateX(0deg); -webkit-transform: perspective(2000px) rotateX(0deg); -ms-transform: perspective(2000px) rotateX(0deg); opacity: 1;}
+.overlay-popup .popup-container .gallery-image{width: 100%; height: auto;}
+/********************/
+.punto_entrada{
+    color: #fc4420;
+    font-size: 20px;
+    position: absolute;
+}
+
+.punto_mapa{
+    position: absolute;
+    text-align: center;
+    color: #fc4420;
+    cursor: pointer;
+    font-size: 2.2em;
+    /*padding: 5px 8px;*/
+    width: 2.5%;
+    height: 4.8%;
+    background: #616161;
+    border-radius: 50%;
+    
+}
+.punto_mapa:hover{
+    width: 2.5%;
+    height: 4.8%;
+    border-radius: 50%;
+    background: #fc4420;
+    color: white;
+}
+.select-scene{
+    background: #fc4420;
+    color: white;
+    width: 2.5%;
+    height: 4.8%;
+    border-radius: 50%;
+}
+@media (max-width: 1000px) {
+    .overlay-popup .popup-container{padding: 30px;}
+    .close-popup{top: 4px; right: 4px;} 
+    .punto_entrada{
+        font-size: 18px;;
+    }
+}
+
+@media (max-width: 600px) {
+    .overlay-popup .popup-container{padding: 20px;}
+    .close-popup{top: 4px; right: 4px;} 
+    .punto_entrada{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .overlay-popup .popup-container{padding: 15px;}
+    .close-popup{top: 1px; right: 1px;} 
+    .punto_entrada{
+        font-size: 10px;
+    }
+}
+
+

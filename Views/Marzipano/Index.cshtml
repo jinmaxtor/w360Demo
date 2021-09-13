@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo Mapaiso | Marzipano</title>
+    <meta name="description" content="CASAS y LOTES a PLAZO y al CONTADO Ubicado en Zona alta de Mayor Crecimiento Km.9 Doble vía la Guardia" />
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+    <style>
+        @@-ms-viewport {
+            width: device-width;
+        }
+    </style>
+    <link href="~/lib/marzipano/reset.css" rel="stylesheet" />
+    <link href="~/css/pages/marzipano/index.css" rel="stylesheet" asp-append-version="true"/>
+</head>
+<body>
+
+    <div id="pano"></div>
+
+    <!-- Different sources -->
+    <!--<div id="iframespot">
+        <div class="message">Select something to play!</div>
+    </div>
+
+    <ul id="iframeselect">
+        <li data-source="googleMaps">Google Maps</li>
+        <li data-source="youtube">YouTube</li>
+        <li data-source="youtubeWithControls">YouTube (UI)</li>
+        <li data-source="koloreyes">KolorEyes</li>
+    </ul>-->
+
+    <script src="~/lib/marzipano/marzipano.js"></script>
+    <script>
+        const params = {
+            viewerContainer: "pano",
+            baseUrl: new URL("@Url.Content("~/")", document.baseURI)
+        }
+
+        window.params = params;
+    </script>
+    <script src="~/js/pages/marzipano/index.js" type="module"></script>
+
+</body>
+</html>
